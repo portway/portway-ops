@@ -69,8 +69,6 @@ async function run() {
   const canceledOrgs = await fetchCanceledOrgs()
 
   const orgsForDeletion = canceledOrgs.filter((org) => {
-    console.log(Date.parse(org.canceledAt))
-    console.log(thirtyDaysAgoTimestamp)
     return Date.parse(org.canceledAt) < thirtyDaysAgoTimestamp
   })
 
