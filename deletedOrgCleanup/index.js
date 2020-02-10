@@ -8,8 +8,7 @@ const DAYS_AGO_FOR_DELETION = 30
 
 const envVarNames = [
   'ADMIN_API_KEY',
-  'API_URL',
-  'LOG_ID'
+  'API_URL'
 ]
 
 const envVars = envVarNames.reduce((vars, envVar) => {
