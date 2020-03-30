@@ -1,5 +1,5 @@
 {
-  "name": "auditlogbackup",
+  "name": "deletedorgcleanup",
   "version": "1.0.0",
   "description": "cleanup deleted org data via portway api",
   "main": "index.js",
