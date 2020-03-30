@@ -1,0 +1,15 @@
+{
+  "name": "deletedorgcleanup",
+  "version": "1.0.0",
+  "description": "cleanup deleted org data via portway api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JJ Idt",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bluebird": "^3.7.2"
+  }
+}
