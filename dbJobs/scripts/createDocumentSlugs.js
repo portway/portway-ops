@@ -30,5 +30,14 @@ module.exports = async (db) => {
     await db.query(query)
   }
 
-  return `Successfully updated ${result.rows.length} documents` //result.rows
+  const versionResults = await db.query(`SELECT name, id FROM "DocumentVersions" WHERE "slug" IS NULL`)
+
+  for (const row of versionResults.rows) {
+    const slug = slugify(row.name)
+    const query = `UPDATE "DocumentVersions" SET slug = '${slug}' WHERE id = '${row.id}';`
+    console.log(query)
+    await db.query(query)
+  }
+
+  return `Successfully updated ${result.rows.length} documents and ${versionResults.rows.length} documentVersions` //result.rows
 }
