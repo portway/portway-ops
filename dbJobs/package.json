@@ -1,0 +1,11 @@
+{
+  "name": "portway-dbjobs",
+  "version": "1.0.0",
+  "description": "This codebase contains the core connection code to connect to the Portway database from within a Portway k8s cluster.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dirk Heniges",
+  "license": "ISC"
+}
