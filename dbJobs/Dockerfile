@@ -10,4 +10,4 @@ RUN npm install
 # Use .dockerignore for things to not copy
 COPY . .
 
-CMD ["node", "index.js"]
+ENTRYPOINT [ "node",  "index.js" ]

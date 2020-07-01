@@ -7,14 +7,18 @@ const scripts = {
 }
 const validScriptNames = Object.keys(scripts)
 
+console.log('loaded index.js')
+
 async function run() {
   const scriptName = process.argv[2]
 
   if (!validScriptNames.includes(scriptName)) {
-    throw new Error(`${scriptName} is not a valid script, must be one of ${validScriptNames.join(', ')}`)
+    throw new Error(`${scriptName} is not a valid script, must be one of: ${validScriptNames.join(', ')}`)
   }
 
-  const scriptFilePath = `./${scripts[scriptName]}`
+  const scriptFilePath = `./scripts/${scripts[scriptName]}`
+  console.log('requiring ' + scriptFilePath)
+
   const scriptFunc = require(scriptFilePath)
 
   try {
