@@ -12,7 +12,6 @@ steps:
     image_name: bonkeybong/portway_db_jobs
     working_directory: ./dbJobs/
     tag: '${{CF_RELEASE_TAG}}'
-    dockerfile: ./dbJobs/Dockerfile
   push_to_docker_hub:
     title: Push to Docker Hub
     type: push
