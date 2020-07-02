@@ -11,11 +11,11 @@ steps:
     type: build
     image_name: bonkeybong/portway_db_jobs
     working_directory: ./dbJobs/
-    tag: '${{CF_RELEASE_TAG}}'
+    tag: ${{CF_BRANCH_TAG_NORMALIZED}}-${{CF_SHORT_REVISION}}
   push_to_docker_hub:
     title: Push to Docker Hub
     type: push
     candidate: ${{build_docker_image}}
-    tag: '${{CF_RELEASE_TAG}}'
+    tag: ${{CF_BRANCH_TAG_NORMALIZED}}-${{CF_SHORT_REVISION}}
     image_name: bonkeybong/portway_db_jobs
     registry: bonkeybong
