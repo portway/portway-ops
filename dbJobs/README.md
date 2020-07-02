@@ -14,3 +14,6 @@ k8s yaml configuration can be found in the main Portway repo in `kuberenetes/job
 1. Create a `.env` file with the required values
 1. `docker build -t bonkeybong/portway_db_jobs .`
 1. Run `docker run --env-file='.env' bonkeybong/portway_db_jobs [scriptName]`
+
+## Production builds
+Once the branch is merged to master in this repo, a Codefresh pipeline will build, tag, and push a Docker image to bonkeybong/portway_db_jobs on Docker Hub. Then the job yaml in the Portway repo can be manually updated and applied on a Kubernetes cluster to run jobs from that tag.
