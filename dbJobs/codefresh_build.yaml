@@ -1,0 +1,21 @@
+version: '1.0'
+steps:
+  main_clone:
+    title: Cloning main repository...
+    type: git-clone
+    repo: '${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}'
+    revision: '${{CF_REVISION}}'
+    git: 'github'
+  build_docker_image:
+    title: Build Docker Image
+    type: build
+    image_name: bonkeybong/portway_db_jobs
+    working_directory: ./dbJobs/
+    tag: ${{CF_BRANCH_TAG_NORMALIZED}}-${{CF_SHORT_REVISION}}
+  push_to_docker_hub:
+    title: Push to Docker Hub
+    type: push
+    candidate: ${{build_docker_image}}
+    tag: ${{CF_BRANCH_TAG_NORMALIZED}}-${{CF_SHORT_REVISION}}
+    image_name: bonkeybong/portway_db_jobs
+    registry: bonkeybong
