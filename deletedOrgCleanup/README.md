@@ -1,4 +1,4 @@
-# Audit log S3 backup
+# Deleted Org Cleanup
 
 This module + Docker image will fetch canceled organizations and trigger data deletion when beyond the set retention period
 
