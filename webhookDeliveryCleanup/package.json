@@ -1,0 +1,14 @@
+{
+  "name": "webhookdeliverycleanup",
+  "version": "1.0.0",
+  "description": "Portway job to cleanup old webhook delivery records",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dirk Heniges",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0"
+  }
+}
