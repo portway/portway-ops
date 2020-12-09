@@ -3,7 +3,8 @@ const db = require('./dbConnector')
 // Script must be defined in ./scripts/[value].js
 // key is the accepted argument for this script
 const scripts = {
-  documentSlugs: 'createDocumentSlugs'
+  documentSlugs: 'createDocumentSlugs',
+  deleteOrphanedRecords: 'deleteOrphanedRecords'
 }
 const validScriptNames = Object.keys(scripts)
 
