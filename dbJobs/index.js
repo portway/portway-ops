@@ -29,7 +29,6 @@ async function run() {
     process.exit()
   } catch(e) {
     throw e
-    process.exit(1)
   }
 }
 
