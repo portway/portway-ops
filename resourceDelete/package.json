@@ -1,0 +1,14 @@
+{
+  "name": "resourcedelete",
+  "version": "1.0.0",
+  "description": "Resources in Portway use sequelize's paranoid feature to \"soft delete\" them. After 30 days, we want to permanently delete the resources, which this job does.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dirk Heniges",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0"
+  }
+}
