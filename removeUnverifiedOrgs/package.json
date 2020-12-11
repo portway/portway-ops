@@ -1,0 +1,14 @@
+{
+  "name": "removeunverifiedorgs",
+  "version": "1.0.0",
+  "description": "Portway allows users to sign up for a free trial, but they must verify their email address. If a user does not verify their email address within 14 days, we remove the organization.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dirk Heniges",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0"
+  }
+}
