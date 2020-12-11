@@ -4,7 +4,7 @@ const db = require('./dbConnector')
 // key is the accepted argument for this script
 const scripts = {
   documentSlugs: 'createDocumentSlugs',
-  deleteOrphanedRecords: 'deleteOrphanedRecords'
+  deleteOrphanedRecords: 'setDeletedRecords'
 }
 const validScriptNames = Object.keys(scripts)
 
