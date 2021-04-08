@@ -13,8 +13,8 @@ module.exports = async (db) => {
   "FieldTypeFileValue"."fieldId" AS "FieldTypeFileValue.fieldId" FROM "Fields" AS "Field" LEFT OUTER JOIN "FieldTypeStringValues" AS "FieldTypeStringValue" ON "Field"."id" = "FieldTypeStringValue"."fieldId" AND("FieldTypeStringValue"."deletedAt" > '2021-04-07 21:22:36.261 +00:00' OR "FieldTypeStringValue"."deletedAt" IS NULL) LEFT OUTER JOIN "FieldTypeTextValues" AS "FieldTypeTextValue" 
   ON "Field"."id" = "FieldTypeTextValue"."fieldId" AND("FieldTypeTextValue"."deletedAt" > '2021-04-07 21:22:36.262 +00:00' OR "FieldTypeTextValue"."deletedAt" IS NULL) LEFT OUTER JOIN "FieldTypeNumberValues" AS "FieldTypeNumberValue" ON "Field"."id" = "FieldTypeNumberValue"."fieldId" AND("FieldTypeNumberValue"."deletedAt" > '2021-04-07 21:22:36.262 +00:00' OR "FieldTypeNumberValue"."deletedAt" IS NULL) 
   LEFT OUTER JOIN "FieldTypeImageValues" AS "FieldTypeImageValue" ON "Field"."id" = "FieldTypeImageValue"."fieldId" AND("FieldTypeImageValue"."deletedAt" > '2021-04-07 21:22:36.262 +00:00' OR "FieldTypeImageValue"."deletedAt" IS NULL) LEFT OUTER JOIN "FieldTypeDateValues" AS "FieldTypeDateValue" ON "Field"."id" = "FieldTypeDateValue"."fieldId" AND("FieldTypeDateValue"."deletedAt" > '2021-04-07 21:22:36.262 +00:00' OR "FieldTypeDateValue"."deletedAt" IS NULL) 
-  LEFT OUTER JOIN "FieldTypeFileValues" AS "FieldTypeFileValue" ON "Field"."id" = "FieldTypeFileValue"."fieldId" AND("FieldTypeFileValue"."deletedAt" > '2021-04-07 21:22:36.262 +00:00' OR "FieldTypeFileValue"."deletedAt" IS NULL) WHERE "Field"."deletedAt" IS NULL`)
-// add back  AND "Field"."renderedValue" IS NULL
+  LEFT OUTER JOIN "FieldTypeFileValues" AS "FieldTypeFileValue" ON "Field"."id" = "FieldTypeFileValue"."fieldId" AND("FieldTypeFileValue"."deletedAt" > '2021-04-07 21:22:36.262 +00:00' OR "FieldTypeFileValue"."deletedAt" IS NULL) WHERE "Field"."deletedAt" IS NULL AND "Field"."renderedValue" IS NULL`)
+
   let updatedSuccess = 0
   for (const row of fieldWithValuesResult.rows) {
     // render template
