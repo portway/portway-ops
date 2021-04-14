@@ -9,6 +9,11 @@
   "author": "Dirk Heniges",
   "license": "ISC",
   "dependencies": {
-    "pg": "^8.2.1"
+    "aws-sdk": "^2.878.0",
+    "axios": "^0.21.1",
+    "mime-types": "^2.1.29",
+    "moment": "^2.29.1",
+    "pg": "^8.2.1",
+    "sharp": "^0.28.0"
   }
 }
