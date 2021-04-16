@@ -5,7 +5,8 @@ const db = require('./dbConnector')
 const scripts = {
   documentSlugs: 'createDocumentSlugs',
   setDeletedRecords: 'setDeletedRecords',
-  addRenderedValue: 'addRenderedValue'
+  addRenderedValue: 'addRenderedValue',
+  imageOptimization: 'imageOptimization'
 }
 const validScriptNames = Object.keys(scripts)
 
