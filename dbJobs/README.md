@@ -26,4 +26,5 @@ Steps:
 5. Update the `image` line to point to the new tag from step 2
 6. Update the `args` with the db script you would like to run (this is the name you chose when adding a new script in step 2 of "Add a new db script"
 7. Be sure to save the file
-8. Run `kubectl apply -f databaseJobs.yaml` (assuming you are in the Portway `kubernetes/jobs` directory)
+8. Run `kubectl delete -n default job portway-db-job` to delete the previous job
+9. Run `kubectl apply -f databaseJobs.yaml` (assuming you are in the Portway `kubernetes/jobs` directory)
