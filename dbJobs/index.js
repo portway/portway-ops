@@ -6,7 +6,8 @@ const scripts = {
   documentSlugs: 'createDocumentSlugs',
   setDeletedRecords: 'setDeletedRecords',
   addRenderedValue: 'addRenderedValue',
-  imageOptimization: 'imageOptimization'
+  imageOptimization: 'imageOptimization',
+  softDeleteWebhooks: 'softDeleteWebhooks'
 }
 const validScriptNames = Object.keys(scripts)
 
